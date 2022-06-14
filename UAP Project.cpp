@@ -31,4 +31,22 @@ int main(){
 	hapus();
 	getch();
 }
-void tambah(int info)
+void tambah (int info)
+{
+	struct simpul *baru;
+	baru=(struct simpul*)mallloc(sizeof(struct simpul));
+	baru->angka=info;
+	baru->berikut=awal;
+	awal=baru;
+}
+void isi(){
+	char jawab;
+	do {
+		cout << "\nInput NPM :";
+		cin >> bil;
+		tambah(bil);
+		cout << "nAbsen Berikutnya	Y/T :";
+		cin >> jawab;
+	}
+		while (toupper(jawab)!='T');
+}
