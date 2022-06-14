@@ -33,6 +33,14 @@ int main(){
 }
 void tambah (int info)
 {
+	
+	
+	
+	
+	
+	
+	
+	
 	struct simpul *baru;
 	baru=(struct simpul*)mallloc(sizeof(struct simpul));
 	baru->angka=info;
@@ -49,4 +57,27 @@ void isi(){
 		cin >> jawab;
 	}
 		while (toupper(jawab)!='T');
+}
+void tampil(){
+	struct simpul* baca;
+	int i;
+	baca=awal;
+	i=1;
+	
+	while(baca!=NULL)
+	
+	{
+		cout<<"\nAbsen ke- "<<i<< " yang hadir (NPM) :"<<baca->angka;
+		i++;
+		baca=baca->berikut;
+	}
+}
+void hapus(){
+	struct simpul*hapus;
+	hapus=awal;
+	while(hapus!=NULL){
+		awal=hapus->berikut;
+		free(hapus);
+		hapus=awal;
+	}
 }
