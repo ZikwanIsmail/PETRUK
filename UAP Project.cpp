@@ -31,3 +31,4 @@ int main(){
 	hapus();
 	getch();
 }
+void tambah(int info)
