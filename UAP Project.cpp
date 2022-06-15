@@ -33,16 +33,8 @@ int main(){
 }
 void tambah (int info)
 {
-	
-	
-	
-	
-	
-	
-	
-	
 	struct simpul *baru;
-	baru=(struct simpul*)mallloc(sizeof(struct simpul));
+	baru=(struct simpul*)malloc(sizeof(struct simpul));
 	baru->angka=info;
 	baru->berikut=awal;
 	awal=baru;
